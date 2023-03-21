@@ -60,7 +60,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             # Выполняет pull образа с DockerHub
-            sudo docker pull toxin3/infra_actions
-            #остановка всех контейнеров
+            sudo docker pull toxin3/infra_actions:latest
+            # Остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 toxin3/infra_actions
+            sudo docker run --rm -d -p 5000:5000 toxin3/infra_actions:latest
