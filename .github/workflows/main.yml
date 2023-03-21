@@ -45,4 +45,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: toxin3/infra_actions :latest
+          tags: toxin3/infra_actions:latest
